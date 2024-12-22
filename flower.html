@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan untuk Pacar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #ff69b4;
+      margin-bottom: 20px;
+    }
+
+    #flower {
+      font-size: 3em;
+      display: none;
+      margin-top: 20px;
+      animation: flowerGrow 3s ease-in-out forwards; /* Animasi bunga tumbuh */
+    }
+
+    #flower p {
+      margin: 10px;
+    }
+
+    #button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #button:hover {
+      background-color: #ff1493;
+    }
+
+    #message {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Animasi bunga tumbuh dari kecil */
+    @keyframes flowerGrow {
+      0% {
+        transform: scale(0.1); /* Mulai dari ukuran sangat kecil */
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2); /* Membesar sedikit */
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1); /* Menjadi ukuran normal */
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="message">
+    <h1>Halo Sayanggkuhhhh!</h1>
+    <p>Tekan tombol di bawah untuk mendapatkan bunga</p>
+  </div>
+
+  <button id="button" onclick="showFlower()">Klik Saya!</button>
+
+  <div id="flower">
+    <p>🌸🌸🌸</p>
+    <p>Bunga untukmu!💕💕💕</p>
+  </div>
+
+  <script>
+    function showFlower() {
+      // Menyembunyikan pesan awal dan tombol
+      document.getElementById('message').style.display = 'none';
+      document.getElementById('button').style.display = 'none';
+
+      // Menampilkan bunga dengan animasi tumbuh
+      document.getElementById('flower').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
